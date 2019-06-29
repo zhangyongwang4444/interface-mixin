@@ -8,16 +8,16 @@ import org.junit.jupiter.api.Test;
 public class MainTest {
     @Test
     @CaptureSystemOutput
-    public void test(CaptureSystemOutput.OutputCapture capture) {
-        capture.expect(Matchers.containsString("A跑啊跑啊跑"));
-        new Main.乌龟("A").跑();
+    public void test1(CaptureSystemOutput.OutputCapture capture) {
+        capture.expect(Matchers.containsString("乌龟跑啊跑啊跑"));
+        new Main.乌龟().跑();
     }
 
     @Test
     @CaptureSystemOutput
-    public void test(CaptureSystemOutput.OutputCapture capture) {
-        capture.expect(Matchers.containsString("B游啊游啊游"));
-        new Main.乌龟("B").游泳();
+    public void test2(CaptureSystemOutput.OutputCapture capture) {
+        capture.expect(Matchers.containsString("乌龟游啊游啊游"));
+        new Main.乌龟().游泳();
     }
 
     @Test
